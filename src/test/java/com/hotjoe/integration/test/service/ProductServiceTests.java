@@ -10,7 +10,6 @@ import java.io.File;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.nio.charset.StandardCharsets;
 import java.time.OffsetDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
@@ -94,7 +93,7 @@ public class ProductServiceTests {
                 // get the entity from the response and convert it into a string
                 ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
                 IOUtils.copy(response.getEntity().getContent(), byteArrayOutputStream);
-                assertTrue(byteArrayOutputStream.toString(StandardCharsets.UTF_8).equalsIgnoreCase("ok"));
+                assertTrue(byteArrayOutputStream.toString().equalsIgnoreCase("ok"));
             }
         }
     }
@@ -126,7 +125,7 @@ public class ProductServiceTests {
 
                 ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
                 IOUtils.copy(response.getEntity().getContent(), byteArrayOutputStream);
-                String body = byteArrayOutputStream.toString(StandardCharsets.UTF_8);
+                String body = byteArrayOutputStream.toString();
 
                 Gson gson = new Gson();
                 Product productResponse = gson.fromJson(body, Product.class);
@@ -175,7 +174,7 @@ public class ProductServiceTests {
 
                 ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
                 IOUtils.copy(response.getEntity().getContent(), byteArrayOutputStream);
-                String body = byteArrayOutputStream.toString(StandardCharsets.UTF_8);
+                String body = byteArrayOutputStream.toString();
 
                 Gson gson = new Gson();
                 Product productResponse = gson.fromJson(body, Product.class);
@@ -213,7 +212,7 @@ public class ProductServiceTests {
 
                 ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
                 IOUtils.copy(response.getEntity().getContent(), byteArrayOutputStream);
-                String body = byteArrayOutputStream.toString(StandardCharsets.UTF_8);
+                String body = byteArrayOutputStream.toString();
 
                 Gson gson = new Gson();
                 Product productResponse = gson.fromJson(body, Product.class);
@@ -282,7 +281,7 @@ public class ProductServiceTests {
 
                 ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
                 IOUtils.copy(response.getEntity().getContent(), byteArrayOutputStream);
-                String body = byteArrayOutputStream.toString(StandardCharsets.UTF_8);
+                String body = byteArrayOutputStream.toString();
 
                 Gson gson = new Gson();
                 Product productResponse = gson.fromJson(body, Product.class);
@@ -301,7 +300,7 @@ public class ProductServiceTests {
 
                 ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
                 IOUtils.copy(response.getEntity().getContent(), byteArrayOutputStream);
-                String body = byteArrayOutputStream.toString(StandardCharsets.UTF_8);
+                String body = byteArrayOutputStream.toString();
 
                 Gson gson = new Gson();
                 Product productResponse = gson.fromJson(body, Product.class);

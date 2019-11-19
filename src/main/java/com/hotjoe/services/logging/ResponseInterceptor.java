@@ -3,7 +3,6 @@ package com.hotjoe.services.logging;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
-import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 import javax.ws.rs.WebApplicationException;
@@ -51,7 +50,7 @@ public class ResponseInterceptor implements WriterInterceptor {
             }
 
             if( mediaType.getType().startsWith("text") || mediaType.equals(MediaType.APPLICATION_JSON_TYPE)) {
-                logger.info("response body: " + baos.toString(StandardCharsets.UTF_8));
+                logger.info("response body: " + baos.toString());
             }
             else {
                 logger.info("response body is of type " + mediaType.toString() + " and it starts with these hex chars: " + bytesToHex(baos.toByteArray(), 25));
