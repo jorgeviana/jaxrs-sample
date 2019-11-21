@@ -18,6 +18,13 @@ For Wildlfy, there are many options to deploy listed on
 [the application deployment page](https://docs.jboss.org/author/display/WFLY10/Application+deployment)
 that can help deploy.
 
+Smoke Test
+----
+
+```
+curl http://127.0.0.1:8080/sample-service/rest/v1/heartbeat
+```
+
 Sample Service Info
 ----
 There are a total of three service endpoints:
