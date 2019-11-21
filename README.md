@@ -20,7 +20,7 @@ that can help deploy.
 
 Smoke Test
 ----
-
+Copy the war in `target` directory to `standalone/deployments` in Wildfly.
 ```
 curl http://127.0.0.1:8080/sample-service/rest/v1/heartbeat
 ```
