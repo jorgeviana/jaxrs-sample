@@ -1,6 +1,9 @@
 package com.hotjoe.services;
 
 
+import com.hotjoe.beans.HelloBean;
+
+import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -25,5 +28,17 @@ public class ServiceHeartBeat {
     @GET
 	public Response getHeartBeat() {
 		return Response.ok("OK").build();
+	}
+
+
+	@Inject
+	HelloBean helloBean;
+
+	@Produces({ MediaType.TEXT_PLAIN })
+    @GET
+	@Path("/hello")
+	public Response hello() {
+		return Response.ok(helloBean.sayHello()).build();
+//		return Response.ok("UOUOUOU").build();
 	}
 }

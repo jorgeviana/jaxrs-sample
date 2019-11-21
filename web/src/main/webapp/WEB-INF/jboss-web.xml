@@ -4,5 +4,6 @@
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:schemaLocation="http://www.jboss.com/xml/ns/javaee http://www.jboss.org/j2ee/schema/jboss-web_10_0.xsd">
 
+<!--    TODO when in EAR the new context is sample-service-web   possibly by maven!!!!!-->
     <context-root>/sample-service</context-root>
 </jboss-web>
